@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+     <h1>ROCK PAPER SCISSORS</h1>
+
+
+
+     <button onclick="
+     let a=Math.floor(Math.random() * 3)
+    //  Let Stone = 0
+    //  Let Paper = 1
+    //  Let Scissors = 2
+     console.log(a);
+
+        if(a==0)
+        {
+            alert('Computer chose stone, Its a Draw');
+        }
+        else if(a==1)
+        {
+            alert('Computer chose Paper You Lose');
+        }
+        else
+        {
+            alert('Computer chose Scissors You Win');
+        }
+
+        ">
+     STONE </button>
+
+
+    <button onclick="
+     let a=Math.floor(Math.random() * 3)
+        if(a==1)
+        {
+            alert('Computer chose Paper, Its a Draw');
+        }
+        else if(a==2)
+        {
+            alert('Computer chose SCISSORS You Lose');
+        }
+        else
+        {
+            alert('Computer chose Stone You Win');
+        }
+
+        ">
+     paper </button>
+
+    <button onclick="
+     let a=Math.floor(Math.random() * 3)
+        if(a==2)
+        {
+            alert('Computer chose SCISSORS, Its a Draw');
+        }
+        else if(a==0)
+        {
+            alert('Computer chose Stone You Lose');
+        }
+        else
+        {
+            alert('Computer chose Paper You Win');
+        }
+
+        ">
+     Scissors </button>
+
+
+</body>
+</html>
