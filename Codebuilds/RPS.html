@@ -36,11 +36,16 @@
     ">RESET</button>
 
 <script>
-let history={
-    WIN:0,
-    LOSE:0,
-    DRAW:0
-}
+// const history={
+//     WIN:0,
+//     LOSE:0,
+//     DRAW:0
+// }
+
+const history=JSON.parse(localStorage.getItem('history'))
+
+// history=
+
 let usermove = '';
 let result='';
 let fun=(usermove)=>
@@ -107,8 +112,7 @@ let fun=(usermove)=>
     {
         history.DRAW+=1;
     }
-
-
+localStorage.setItem('history',JSON.stringify(history));
 alert(`You chose ${usermove} and computer chose ${data}. You ${result}.
 Score is : WIN: ${history.WIN}, LOSE: ${history.LOSE}, DRAW: ${history.DRAW}`);
 }
@@ -140,6 +144,10 @@ let reset=()=>
     history.DRAW=0;
     alert('Score Reset');
 }
+
+
+
+
 
 
 
