@@ -22,5 +22,20 @@ console.log(jsn)
 
 // localStorage
 
-localStorage.setItem()
-localStorage.getItem()
+// localStorage.setItem()
+// localStorage.getItem()
+
+
+let a;
+let b=null;
+let c={
+
+}
+let d=()=>
+{
+
+}
+console.log(typeof(a))
+console.log(typeof(b))
+console.log(typeof(c))
+console.log(typeof(d))

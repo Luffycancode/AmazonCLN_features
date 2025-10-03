@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Its a game of HEADS and TAILS </h1>
+<button onclick="
+PlayerMove='HEADS'
+PlayGame()
+">HEADS</button>
+
+<button onclick="
+PlayerMove='TAILS'
+PlayGame()
+">TAILS</button>
+
+<button onclick="localStorage.removeItem('history'), alert('Score is Reset'),history.WIN=0,history.LOSE=0" >RESET</button>
+
+
+<script>
+let PlayerMove=''
+let ComputerMove=''
+let result=''
+// const history={
+//     WIN:0,
+//     LOSE:0
+// }
+const history=JSON.parse(localStorage.getItem('history'))|| { WIN:0, LOSE:0 };
+
+
+let PlayGame = ()=>
+{
+let guess = Math.floor(Math.random()*2)
+if(guess==0)
+{
+    ComputerMove='HEADS'
+}
+else{
+    ComputerMove='TAILS'
+}
+
+
+if(PlayerMove===ComputerMove)
+{
+history.WIN++
+result='Guessed right and won the game'
+}
+else{
+history.LOSE++
+result='Guessed wrong and lost the game'
+}
+
+localStorage.setItem('history',JSON.stringify(history));
+
+
+
+
+alert(`${result} by selecting ${PlayerMove}. Computer chose ${ComputerMove}, 
+The scores are - >  WIN: ${history.WIN}  LOSE: ${history.LOSE}`)
+
+}
+
+
+
+</script>
+    
+</body>
+</html>
